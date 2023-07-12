@@ -1,0 +1,21 @@
+$border-radius: 4px;
+
+.Navigator {
+  background-color: #99c3fa;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  box-shadow: 0 0 5px #000;
+
+  a {
+    padding: 0.5rem 1rem;
+    border-radius: $border-radius;
+    border: 1px solid #7fabe6;
+
+    &:hover {
+      background-color: #66a1ee;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.Transaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0.5rem 1.5rem;
+
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .amount {
+    display: flex;
+    align-items: center;
+  }
+}

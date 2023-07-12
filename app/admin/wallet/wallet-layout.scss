@@ -1,0 +1,78 @@
+$border-color: #eee;
+$border-radius: 8px;
+$border-props: 1px solid $border-color;
+$box-shadow: 0 3px 12px 0 rgba(111,127,134,.2);
+
+.wallet-layout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .balance {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    flex: 1;
+    border: $border-props;
+    padding: 1rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    .Balance {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex: 1 1 100%;
+      padding: 0.5rem 1.5rem;
+
+      .data {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+
+        i {
+          font-size: 3rem;
+        }
+      }
+
+      .amount {
+        font-size: 2rem;
+        color: #333;
+      }
+    }
+  }
+
+  .transactions {
+    flex: 2;
+    border: $border-props;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    .Transaction {
+      border-bottom: $border-props;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .paymentOperation {
+        color: red;
+        &:before {
+          content: '- ';
+        }
+      }
+    }
+  }
+}
